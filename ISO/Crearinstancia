@@ -1,0 +1,15 @@
+Crear una instancia
+En details creamos el nombre, en source seleccionamos imagen y no crear volumen y debian10 buster, en sabor m1 mini. En la pestaña de par de claves, creamos o asociamos una(si solo hay una se asigna automáticamente)
+Desde fuera, le asociamos una ip flotante
+
+Usamos el comando mv pardeclaves.pem ~/.ssh/ para pasarlo al ssh, para comprobarlo usamos-> cd para ir a la raíz y luego cd .ssh , ls
+Para asegurarnos de que funcione el par de claves(y por seguridad), chmod 400 archivo.pem (Le concedemos permiso de lectura pero limitamos escritura y ejecución)
+tenemos que asignarle una ip flotante.
+Para acceder a la instancia → 
+Vamos al ssh(que es donde tenemos el par de claves) → cd .ssh/ y luego:
+sudo ssh -i sistemas.pem(archivo pem) debian@172.22.201.104(ip flotante)
+(A veces da error, y lo que tenemos que hacer es que dentro de ese error nos da un comando para copiar y pegar. Una vez hecho vuelvo a intentar meterme).
+Una vez dentro lo recomendable es hacer un sudo apt update
+También es recomendable añadirle una contraseña para que no sea necesario acceder con el par de claves -> sudo passwd debian
+Crear instancia de windows
+windows server, luego en sabor ssd medium 

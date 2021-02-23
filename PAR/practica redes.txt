@@ -1,0 +1,3 @@
+Compartir y editar carpetas entre windows-windows
+linux-linux
+windows-linux
